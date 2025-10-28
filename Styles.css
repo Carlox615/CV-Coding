@@ -1,0 +1,771 @@
+/*
+ÍNDICE:
+1. Normalización
+2. Reset
+3. Style Guide
+4. Header
+5. Main - Skills
+6. Main - Contact Link
+7. Main - Road so far
+8. Main - Toolbox
+9. Main - LevelUps
+10. Footer
+*/
+
+/* 1. Normalización ........................................................................... */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+
+
+/* 2. Reset ........................................................................... */
+/* Reset.css v2.0 | 20110126 | License: none (public domain) | http://meyerweb.com/eric/tools/css/reset/ */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+/* 3. StyleGuide ................................................................. */
+
+
+:root {
+    
+    /* -----------  COLOR COLOR COLOR ------*/
+
+    /* Yellow------*/
+    --Yellow-100: #FFD700;
+    --Yellow-75: #FFE13F;
+    --Yellow-50: #FFEB7F;
+    --Yellow-25: #FFF5BF;
+
+    /* Purple------*/
+
+    --Purple-100: #8400FF;
+    --Purple-75: #A23FFF;
+    --Purple-50: #C17FFF;
+    --Purple-25: #E0BFFF;
+
+    /* Black------*/
+
+    --Black-100: #1A1A1A;
+    --Black-75: #535353;
+    --Black-50: #8C8C8C;
+    --Black-25: #C5C5C5;
+
+    /* Red------*/
+
+    --Red-100: #FF0033;
+    --Red-75: #FF3F66;
+    --Red-50: #FF7F99;
+    --Red-25: #FFBFCC;
+
+    /* Blue------*/
+
+    --Blue-100: #00BFFF;
+    --Blue-75: #3FCFFF;
+    --Blue-50: #7FDFFF;
+    --Blue-25: #BFEFFF; 
+
+    /* Surface------*/
+
+    --Surface-Black: #000;
+    --Surface-White: #fff;
+
+    /* --------- BORDERS BORDERS BORDERS ------*/
+
+    --stroke-XS:3px;
+    --Stroke-size-S: 6px;
+    --Stroke-size-M: 10px;
+    --Stroke-size-L: 20px;
+
+    --Stroke-color: var(--Surface-Black);
+
+    /* --------- CORNER RADIOUS CORNER RADIOUS ------*/
+
+    --Corner-radious: 20px;
+    --Corner-radious-rounded: 62.5rem;
+
+    /* --------- SHADOWS SHADOWS SHADOWS -------------*/
+
+    --Shadow-XS: 5px;
+    --Shadow-S: 7px;
+    --Shadow-M: 15px;
+
+    /* --------- TEXT SIZES -------------*/
+
+    --h2-: 5.8125rem;
+    --h3-: 3.125rem;
+    --h4-: 2.1875rem;
+    --body-:1.2rem;
+
+    /* --------- IMAGES SIZES -------------*/
+
+    --img-XLarge: 12.4375rem;
+    --img-Large:10rem;
+    --img-Small: 5.5rem;
+    --bg-Large: 8.125rem;
+}
+
+
+/* --------- TEXT TEXT TEXT TEXT -------------------------------*/
+
+b{
+  font-family: 'Bricolage Grotesque';
+  font-size: var(--body-);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.7rem;
+  letter-spacing: 0.01375rem;
+}
+
+a , p , li {
+    font-family: 'Bricolage Grotesque';
+    color: var(--Surface-Black);
+    font-size: var(--body-);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7rem;
+    letter-spacing: 0.01375rem;
+}
+
+dt , dd {
+    font-family: 'Bricolage Grotesque';
+    color: var(--Surface-White);
+    font-size: var(--body-);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.7rem;
+    letter-spacing: 0.01375rem;
+}
+
+
+h1, h2, h3, h4, .skills li {
+font-family: 'Climate Crisis';
+text-transform: uppercase;
+color: var(--Surface-White);
+} 
+
+h2, .skills li{
+font-size: var(--h2-);
+font-style: normal;
+font-weight: 400;
+line-height: 6.39375rem;
+letter-spacing: 0.29063rem;
+paint-order: stroke fill;
+-webkit-text-stroke-width: var(--Stroke-size-L);
+-webkit-text-stroke-color: var(--Surface-Black);
+text-shadow: var(--Shadow-M) var(--Shadow-M) 0 var(--Surface-Black);
+}
+
+h3 {
+font-size: var(--h3-);
+font-style: normal;
+font-weight: 400;
+line-height: 3.4375rem;
+letter-spacing: 0.25rem;
+text-shadow: var(--Shadow-S) var(--Shadow-S) 0 var(--Surface-Black);
+paint-order: stroke fill;
+-webkit-text-stroke-width: var(--Stroke-size-M);
+-webkit-text-stroke-color: var(--Surface-Black);
+}
+
+h4 {
+font-size: var(--h4-);
+font-style: normal;
+text-shadow: var(--Shadow-S) var(--Shadow-S) 0 var(--Surface-Black);
+-webkit-text-stroke-width: var(--Stroke-size-M);
+-webkit-text-stroke-color: var(--Surface-Black);
+font-weight: 400;
+line-height: 2.40rem;
+letter-spacing: 0.175rem;
+text-shadow: var(--Shadow-S) var(--Shadow-S) 0 var(--Surface-Black);
+paint-order: stroke fill;
+-webkit-text-stroke-width: var(--Stroke-size-M);
+-webkit-text-stroke-color: var(--Surface-Black);
+}
+
+.purple{
+    display: inline-flex;
+    padding: 0.9375rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: var(--Corner-radious-rounded);
+    border: var(--stroke-XS) solid var(--Purple-100);
+    background: var(--Surface-White);
+    box-shadow: var(--Shadow-XS) var(--Shadow-XS) 0 var(--Purple-100);
+    text-decoration: none;
+    color: var(--Purple-100);
+}
+
+a, button {
+    display: inline-flex;
+    padding: 0.9375rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: var(--Corner-radious-rounded);
+    border: var(--stroke-XS) solid var(--Surface-Black);
+    background: var(--Surface-White);
+    box-shadow: var(--Shadow-XS) var(--Shadow-XS) 0 var(--Surface-Black);
+    text-decoration: none;
+    cursor: url(Media/cursorPointer.png), pointer;
+}
+
+a:hover , button:hover {
+  background-color: var(--Black-25);
+  box-shadow: none;
+  transform: translate(2px , 2px);
+}
+
+.purple:hover{
+  background-color: var(--Purple-25);
+  box-shadow: none;
+  transform: translate(2px , 2px);
+}
+
+
+/* --------- BACKGROUND BACKGROUND BACKGROUND -------------------------------*/
+
+.top,
+.skills,
+.contactlinks,
+.roadsofar,
+.levelups {
+    padding: 3.75rem 0;
+    background-image: url(Media/boxBG.svg);
+    background-size: var(--bg-Large) var(--bg-Large);
+    background-position: center;
+    background-blend-mode: soft-light;
+}
+
+/* --------- GENERAL GENERAL LAYOUT LAYOUT -------------------------------*/
+
+body{
+  cursor: url(Media/cursor.png), auto ;
+}
+
+.wrap{
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* NAV NAV NAV NAV ................................................................. */
+
+nav {
+    border-bottom: 4px solid var(--Surface-White);
+    background: var(--Surface-Black);
+    padding: 1.25rem 0rem;
+    position: fixed;
+    width: 100%;
+  }
+
+  nav .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+nav img {
+    width: 6.7925rem;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* 1. BANNER BANNER BANNER BANNER BANNER BANNER............................................................... */
+
+.imagenHeader::before {
+    content: "";
+  display: inline-block;
+  width: var(--img-XLarge);
+  height: var(--img-XLarge);
+  background: url(Media/CJPIC.png) no-repeat center / contain;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.imagenHeader{
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.top {
+    padding-top: 150px;
+    background-color: var(--Purple-100);
+}
+
+.wrap h2 {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    gap: 2.5rem;
+}
+
+#textoAnimacion {
+  font-size: var(--h2-);
+  border-right: var(--Stroke-size-S) solid var(--Surface-White); /* cursor */
+  white-space: nowrap;
+  display: inline-block;
+  overflow: visible; /* 👈 cambio importante */
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+
+/* 2. SKILLS SKILLS SKILLS SKILLS.................................. */
+
+.skills{
+background-color: var(--Yellow-100);
+}
+
+
+.skills li{
+margin-bottom: 2.5rem;    
+}
+
+.skills li:last-child{
+    margin-bottom: 0;
+}
+
+.skills li{
+    display:flex;
+    align-items:center;  
+}
+
+.skills li:before {
+    content: "";
+  display: inline-block;
+  margin-right: 2.5rem;
+  width: var(--img-XLarge);
+  height: var(--img-XLarge);
+}
+
+.skills li.ux::before {
+  background: url(Media/UXUISticker.png) no-repeat center / contain;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.skills li.developer::before {
+  background: url(Media/FresherSticker.png) no-repeat center / contain;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.skills li.design::before {
+  background: url(Media/GraphicDesignSticker.png) no-repeat center / contain;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+
+/* 3. CONTACT LINKS CONTACT LINK CONTACT LINKS....................................... */
+
+
+.contactlinks{
+background-color: var(--Red-100);
+}
+
+.contactlinks .wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.contactlinks ol {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.contactlinks li {
+  flex: 1;
+}
+
+.contactlinks a {
+  display: flex; 
+}
+
+.linkedin::before,
+.dribbble::before,
+.github::before,
+.portfolio::before{
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2.625rem;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.linkedin::before{
+  background: url(Media/Linkedin.svg) no-repeat center / contain;
+}
+
+.dribbble::before{
+  background: url(Media/Dribbble.svg) no-repeat center / contain;
+}
+
+.github::before{
+  background: url(Media/Git.svg) no-repeat center / contain;
+}
+
+.portfolio::before{
+  background: url(Media/Portfolio.svg) no-repeat center / contain;
+}
+
+/* 4. ROAD SO FAR ROAD SO FAR ROAD SO FAR ROAD SO FAR ..................................... */
+
+.roadsofar{
+background-color: var(--Blue-100);
+}
+
+.roadsofar .wrap{
+display: flex;
+flex-direction: column;
+gap: 2rem;
+align-items: center;
+}
+
+.roadsofar h3 {
+  display: flex;               
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.roadsofar h3::before {
+  content: "";
+  display: block;
+  width: var(--img-XLarge);
+  height: var(--img-XLarge);
+  background: url(Media/roadSoFar.png) no-repeat center / contain;
+  margin-bottom: 1.25rem;
+}
+
+.expcard {
+  background-color: var(--Surface-White);
+  padding: 1.25rem;
+  border-radius: var(--Corner-radious);
+  border: var(--stroke-XS) solid var(--Surface-Black);
+  background: var(--Surface-White);
+  box-shadow: var(--Shadow-XS) var(--Shadow-XS) 0 var(--Surface-Black);
+  max-width: 41.5rem;
+}
+
+.expcardhead{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.expcardhead::before {
+  content: "";
+  margin-right: 1rem;
+  width: var(--img-Small);
+  height: var(--img-Small);
+  aspect-ratio: 1/1;
+}
+
+.veganhive::before {
+  background: url(Media/logoVeganhive.png) no-repeat center / contain;
+}
+
+.narcissa::before {
+  background: url(Media/logoNarcissa.png) no-repeat center / contain;
+}
+
+.cwd::before {
+  background: url(Media/logoCWD.png) no-repeat center / contain;
+}
+
+.expcardhead span{
+  display: block;
+}
+
+/* 5 TOOLBOX TOOLBOX TOOLBOX TOOLBOX TOOLBOX.......................... */
+
+.toolbox{
+background-color: var(--Surface-Black);
+padding: 3.75rem 0;
+background-image: url(Media/bgWhite.svg);
+background-size: var(--bg-Large) var(--bg-Large);
+background-position: center;
+}
+
+.toolbox h3{
+  text-align: center;
+  display: flex;               
+  flex-direction: column; 
+  align-items: center;
+  text-align: center;
+}
+
+.toolbox h3::before {
+  content: "";
+  display: block;
+  width: var(--img-XLarge);
+  height: var(--img-XLarge);
+  background: url(Media/toolbox.png) no-repeat center / contain;
+  margin-bottom: 1.25rem;
+}
+
+.toolbox .wrap{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 2.5rem;
+}
+
+.tools {
+display: inline-flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1rem;      
+}
+
+.tools li {
+    display: inline-flex;
+    padding: 0.9375rem 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: var(--Corner-radious-rounded);
+    border: var(--stroke-XS) solid var(--Surface-Black);
+    background: var(--Surface-White);
+}
+
+/* 6. LEVEL UPS LEVEL UPS LEVEL UPS............................................... */
+
+.levelups {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Purple-100);
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  gap: 2.5rem;
+}
+
+.levelups h3{
+  text-align: center;
+}
+
+.levelups li{
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  color: var(--Surface-White);
+  justify-content: left;
+}
+
+.levelups li:last-child{
+  margin-bottom: 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imgdt::before {
+  display: block;
+  content: "";
+  margin-right: 1rem;
+  width: var(--img-Small);
+  height: var(--img-Small);
+  aspect-ratio: 1/1;
+  flex-shrink: 0;
+}
+
+.ipartek::before{
+  background: url(Media/LVLipartek.png) no-repeat center / contain;
+}
+
+.deusto::before{
+  background: url(Media/LVLdeusto.png) no-repeat center / contain;
+}
+
+.pddribbble::before{
+  background: url(Media/LVLdribbble.png) no-repeat center / contain;
+}
+
+.iut::before{
+  background: url(Media/LVLiut.png) no-repeat center / contain;
+}
+
+/* 7. FOOTER ....FOOTER...FOOTER.......................................................... */
+
+footer {
+    background-color: var(--Yellow-100);
+    text-align: center;
+    padding: 2.5rem;
+}
+
+
+/* ------------ DIALOG DIALOG DIALOG DIALOG -------------*/
+
+dialog{
+  padding: 1.875rem;
+  border-radius: 3.75rem;
+  border: var(--Stroke-size-S) solid var(--Surface-Black);
+  background: var(--Yellow-100);
+  box-shadow: var(--Shadow-S) var(--Shadow-S) 0 var(--Surface-Black);
+  width: 360px;
+  height: fit-content;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+dialog[data-open="true"] {
+  animation: bounceIn 0.5s ease;
+}
+
+.headDialog{
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.buttonsDialog ol{
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.buttonsDialog li {
+  flex: 1;
+}
+
+.buttonsDialog a {
+  display: flex;
+}
+
+.email::before{
+  background: url(Media/emailPurple.svg) no-repeat center / contain;
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2.625rem;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.linkedinDialog::before{
+  background: url(Media/linkedInPurple.svg) no-repeat center / contain;
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2.625rem;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+
+
+
+/* --------- RESPONSIVE RESPONSIVE RESPONSIVE -------------------------------*/
+
+@media screen and (max-width: 1200px){
+
+  #textoAnimacion , h2, .skills li{
+  font-size: var(--h3-);
+  line-height: 3.4375rem;
+  letter-spacing: 0.25rem;
+  paint-order: stroke fill;
+-webkit-text-stroke-width: var(--Stroke-size-M);
+-webkit-text-stroke-color: var(--Surface-Black);
+text-shadow: var(--Shadow-S) var(--Shadow-S) 0 var(--Surface-Black);
+  }
+
+  .wrap{
+  max-width: 660px;
+  padding: 0 15px;
+  margin: 0 auto;
+  }
+
+ .imagenHeader::before,
+  .skills li.ux::before,
+  .skills li.developer::before,
+  .skills li.design::before{
+  width: var(--img-Large);
+  height: var(--img-Large);
+  }
+}
+
+
+/* ------------ MOBILE MOBILE MOBILE MOBILE -------------*/
+
+@media screen and (max-width: 760px){
+  .wrap{
+  max-width: 390px;
+  padding: 0 15px;
+  margin: 0 auto;
+  }
+
+   #textoAnimacion , h2, h3, .skills li{
+  font-size: var(--h4-);
+  line-height: 2.40rem;
+  }
+
+  .imagenHeader , .top h2{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .skills .wrap li{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .skills li:before {
+  margin-right: 0;
+  }
+
+  .contactlinks ol{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+}
+
+
+
+
+
